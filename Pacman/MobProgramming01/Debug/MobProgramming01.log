@@ -1,0 +1,18 @@
+﻿  GameApp.cpp
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(38,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(39,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(103,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(104,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(107,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(108,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(119,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(120,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(168,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(167,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(187,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(188,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(191,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(192,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(246,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\GameApp.cpp(245,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  MobProgramming01.vcxproj -> C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\bin\Win32\Debug\MobProgramming01.exe
