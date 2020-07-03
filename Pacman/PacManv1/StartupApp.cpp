@@ -67,9 +67,15 @@ void StartupApp::Update()
 	//If the upkey is pressed but hasnt been pressed before
 	if (IsKeyPressed(m_upKey) && ifPressedUp == false)
 	{
+		ifPressedUp = true;//The player is moving up
+		ifPressedDown = false;
+		ifPressedLeft = false;
+		ifPressedRight = false;
 		//If either other direction is being pressed atm.
 		if ((ifPressedDown == true || ifPressedLeft == true || ifPressedRight == true) && m_map[nextIndexY][nextIndexX] == WALL)
 		{
+			m_pacDir.y = 0;
+			m_pacDir.x = 0;
 			while (m_pacPos.y != currentIndexY * m_tileHeight)
 			{
 				m_pacDir.y = 0;
@@ -80,8 +86,7 @@ void StartupApp::Update()
 					m_pacPos.y += 1;
 				Draw();
 			}
-			m_pacDir.y = 0;
-			m_pacDir.x = 0;
+
 			return;
 		}
 		//If the movement is going to collid with a wall.
@@ -103,17 +108,20 @@ void StartupApp::Update()
 		}
 		//Increases the direction
 		m_pacDir = {0, -1};
-		ifPressedUp = true;//The player is moving up
-		ifPressedDown = false;
-		ifPressedLeft = false;
-		ifPressedRight = false;
+
 	}
 	//If the downkey is pressed but has not been pressed before.
 	else if (IsKeyPressed(m_downKey) && ifPressedDown == false)
 	{
+		ifPressedUp = false;
+		ifPressedDown = true;//The player is moving down
+		ifPressedLeft = false;
+		ifPressedRight = false;
 		//If any of the other keys have not been pressed.
 		if ((ifPressedUp == true || ifPressedLeft == true || ifPressedRight == true) && m_map[nextIndexY][nextIndexX] == WALL)
 		{
+			m_pacDir.y = 0;
+			m_pacDir.x = 0;
 			while (m_pacPos.y != currentIndexY * m_tileHeight)
 			{
 				m_pacDir.y = 0;
@@ -124,8 +132,7 @@ void StartupApp::Update()
 					m_pacPos.y += 1;
 				Draw();
 			}
-			m_pacDir.y = 0;
-			m_pacDir.x = 0;
+
 			return;
 		}
 		//If the direction is going to collid with a wall.
@@ -147,17 +154,20 @@ void StartupApp::Update()
 		}
 		//Moves in the direction
 		m_pacDir = { 0, 1 };
-		ifPressedUp = false;
-		ifPressedDown = true;//The player is moving down
-		ifPressedLeft = false;
-		ifPressedRight = false;
+
 	}
 	//If the leftkey is pressed but has not been pressed before.
 	else if (IsKeyPressed(m_leftKey) && ifPressedLeft == false)
 	{
+		ifPressedUp = false;
+		ifPressedDown = false;
+		ifPressedLeft = true;//The player is moving left
+		ifPressedRight = false;
 		//If any of the other keys have not been pressed.
 		if ((ifPressedDown == true || ifPressedRight == true || ifPressedUp == true) && m_map[nextIndexY][nextIndexX] == WALL)
 		{
+			m_pacDir.y = 0;
+			m_pacDir.x = 0;
 			while (m_pacPos.x != currentIndexX * m_tileWidth)
 			{
 				m_pacDir.y = 0;
@@ -168,8 +178,7 @@ void StartupApp::Update()
 					m_pacPos.x += 1;
 				Draw();
 			}
-			m_pacDir.y = 0;
-			m_pacDir.x = 0;
+
 			return;
 		}
 		//If the direction is going to collid with a wall.
@@ -191,17 +200,20 @@ void StartupApp::Update()
 		}
 		//Moves in the direction
 		m_pacDir = { -1, 0 };
-		ifPressedUp = false;
-		ifPressedDown = false;
-		ifPressedLeft = true;//The player is moving left
-		ifPressedRight = false;
+
 	}	
 	//If the rightkey is pressed but has not been pressed before.
 	else if (IsKeyPressed(m_rightKey) && ifPressedRight == false)
 	{
+		ifPressedUp = false;
+		ifPressedDown = false;
+		ifPressedLeft = false;
+		ifPressedRight = true;//The player is moving right
 		//If any of the other keys have not been pressed.
 		if ((ifPressedDown == true || ifPressedLeft == true || ifPressedUp == true) && m_map[nextIndexY][nextIndexX] == WALL)
 		{
+			m_pacDir.y = 0;
+			m_pacDir.x = 0;
 			while (m_pacPos.x != currentIndexX * m_tileWidth)
 			{
 				m_pacDir.y = 0;
@@ -212,8 +224,7 @@ void StartupApp::Update()
 					m_pacPos.x += 1;
 				Draw();
 			}
-			m_pacDir.y = 0;
-			m_pacDir.x = 0;
+
 			return;
 		}
 		//If the direction is going to collid with a wall.
@@ -235,10 +246,7 @@ void StartupApp::Update()
 		}
 		//Moves in the direction
 		m_pacDir = { 1, 0 };
-		ifPressedUp = false;
-		ifPressedDown = false;
-		ifPressedLeft = false;
-		ifPressedRight = true;//The player is moving right
+
 	}
 
 	m_pacPos.x += m_pacDir.x * m_pacSpeed;
@@ -254,16 +262,6 @@ void StartupApp::Update()
 	//Checks if its near a way.
 	if (m_map[nextIndexY][nextIndexX] == WALL)
 	{
-		while (m_pacPos.x != currentIndexX * m_tileWidth)
-		{
-			m_pacDir.y = 0;
-			m_pacDir.x = 0;
-			if (m_pacPos.x > currentIndexX* m_tileWidth)
-				m_pacPos.x -= 1;
-			if (m_pacPos.x < currentIndexX * m_tileWidth)
-				m_pacPos.x += 1;
-			Draw();
-		}
 		m_pacDir.x = 0;
 		m_pacDir.y = 0;
 		m_pacPos.x = currentIndexX * m_tileWidth;
@@ -285,6 +283,8 @@ void StartupApp::Draw()
 
 
 
+
+
 	for (int y = 0; y < MAP_ROWS; y++)
 	{
 		for (int x = 0; x < MAP_COLS; x++)
@@ -303,7 +303,7 @@ void StartupApp::Draw()
 			}
 		}
 	}
-
+	DrawText(FormatText("Score: %i", score), 10, 10, 20, BLUE);
 	// deraw packman
 	DrawCircle(
 		m_pacPos.x + tw * 0.5f,
@@ -311,7 +311,7 @@ void StartupApp::Draw()
 		tw * 0.5f - 3,
 		Color({ 255, 255, 0, 255 })
 	);
-	DrawText("Score: " + score, 10, 10, 20, BLUE);
+
 	EndDrawing();
 }
 
