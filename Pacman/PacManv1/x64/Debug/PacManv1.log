@@ -5,8 +5,8 @@ C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(59,20): warning 
 C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(60,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(64,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(65,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(268,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(269,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(307,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(306,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(270,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(310,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\s172834\Desktop\Pac-Man\Pacman\PacManv1\StartupApp.cpp(309,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   PacManv1.vcxproj -> C:\Users\s172834\Desktop\Pac-Man\Pacman\MobProgramming01\x64\Debug\PacManv1.exe

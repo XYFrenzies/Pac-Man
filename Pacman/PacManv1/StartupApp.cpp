@@ -249,6 +249,7 @@ void StartupApp::Update()
 	if (m_map[currentIndexY][currentIndexX] == FOOD)
 	{
 		m_map[currentIndexY][currentIndexX] = EMPTY;
+		score += 100;
 	}
 	//Checks if its near a way.
 	if (m_map[nextIndexY][nextIndexX] == WALL)
@@ -282,6 +283,8 @@ void StartupApp::Draw()
 	int hw = tw / 2; //HalfWidth
 	int hh = th / 2; //HalfHeight
 
+
+
 	for (int y = 0; y < MAP_ROWS; y++)
 	{
 		for (int x = 0; x < MAP_COLS; x++)
@@ -292,7 +295,7 @@ void StartupApp::Draw()
 
 			if (tileID == WALL)
 			{
-				DrawRectangle(xPos, yPos, tw, th, WHITE );
+				DrawRectangle(xPos, yPos, tw, th, WHITE);
 			}
 			if (tileID == FOOD)
 			{
@@ -308,7 +311,7 @@ void StartupApp::Draw()
 		tw * 0.5f - 3,
 		Color({ 255, 255, 0, 255 })
 	);
-
+	DrawText("Score: " + score, 10, 10, 20, BLUE);
 	EndDrawing();
 }
 

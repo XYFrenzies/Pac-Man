@@ -52,6 +52,7 @@ private:
 	Vector2 m_pacPos;//The pacmans position
 	Vector2 m_pacDir;//The pacmans position
 
+	int score = 0; //The score of pacman
 
 	float m_pacSpeed;//The pacmans speed
 
